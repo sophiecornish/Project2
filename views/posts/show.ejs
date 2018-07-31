@@ -1,14 +1,17 @@
 
-<div class="columns is-centered">
-  <div class="column is-10">
-    <img src="<%= post.image %>" alt="">
+<div class="columns">
+  <div class="column is-12">
+
+    <img class="hero-image" src="<%= post.image %>" alt="">
   </div>
 </div>
 
+
 <hr>
 
+<div class="columns is-multiline">
 
-  <div class="column is-one-half">
+  <div class="column is-12">
 
     <h1 class="title is-1"><%= post.title %></h1>
     <h2 class="subtitle is-1"><%= post.subtitle %></h2>
@@ -16,17 +19,18 @@
 
   </div>
 
-<hr>
-  <div class="column is-centered">
-    <div class="column is-10">
+  <hr>
+  <div class="column is-12">
+    <div class="column is-12">
       <p><%= post.content %></p>
     </div>
   </div>
 
-<div class="column is-one-half">
+  <div class="column is-one-half">
 
     <p>Posted: <%= post.date %></p>
     <p>likes: <%= post.likes %></p>
+  </div>
 </div>
 
 

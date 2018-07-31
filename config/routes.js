@@ -23,8 +23,14 @@ function secureRoute(req, res, next) {
 
 //---------- RENDERING PAGES -----------------//
 
-router.get('/', (req, res) => res.render('pages/_home'));
+// router.get('/', (req, res) => res.render('pages/_home'));
 router.get('/about', (req, res) => res.render('pages/_about'));
+
+
+//-------------- HOME PAGE ---------//
+
+router.route('/')
+  .get(postController.recent);
 
 
 //--------------REGISTRATION ROUTES -----------------//

@@ -2,25 +2,23 @@
   <div class="container">
 <div class="navbar-left">
   <div class="navbar-brand">
-    <figure class="image is-96x96">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPrO6xE4BBWnALhVJv5FdF3feBoEYagD5rYBXSDd8-9O3OKCpO">
-
-    </figure>
-
-
+  <a class="navbar-item" href="/">THE CORD PROJECT</a>
   </div>
 </div>
 <div class="navbar-end">
   <div class="navbar-menu">
-    <a class="navbar-item" href="/posts/new">New Blog Post</a>
-    <a class="navbar-item" href="/">Home</a>
-    <a class="navbar-item" href="/about">About</a>
-    <a class="navbar-item" href="/posts">Posts</a>
+
 
     <% if(!locals.isLoggedIn) { %>
+    <a class="navbar-item" href="/about">About</a>
+    <a class="navbar-item" href="/posts">Posts</a>
     <a class="navbar-item" href="/registrations/new">Sign up</a>
     <a class="navbar-item" href="/sessions/new">Login</a>
   <% } else { %>
+    <a class="navbar-item" href="/posts/new">New Blog Post</a>
+    <a class="navbar-item" href="/about">About</a>
+    <a class="navbar-item" href="/posts">Posts</a>
+
     <a class="navbar-item" href="/sessions/delete">Log Out <%= locals.user.username %></a>
     <% } %>
 

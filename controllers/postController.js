@@ -58,6 +58,15 @@ function postsDelete(req, res) {
 
 }
 
+function postsRecent(req, res) {
+  console.log('we made it to the controller!!!!');
+  Post
+    .find().sort({createdAt: -1}).limit(3)
+    .then(recentPosts=> {
+      console.log(recentPosts);
+      res.render('pages/_home', {recentPosts});
+    });
+}
 
 
 
@@ -70,5 +79,6 @@ module.exports = {
   create: postsCreate,
   edit: postsEdit,
   update: postsUpdate,
-  delete: postsDelete
+  delete: postsDelete,
+  recent: postsRecent
 };

@@ -5,11 +5,10 @@ const postSchema = new mongoose.Schema({
   author: { type: mongoose.Schema.ObjectId, ref: 'User' },
   image: { type: String, required: true },
   content: String,
-  date: String,
   readingTime: Number,
   likes: Number,
   comments: [{name: String, content: String}]
-});
+}, {timestamps: true});
 
 
 

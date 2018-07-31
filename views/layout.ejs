@@ -2,19 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">¡
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <title>The Cord Project</title>
   </head>
   <body>
+    <div class="container is-widescreen">
     <% include ./partials/_header %>
-<div class="container">
-  <section class="hero is-dark">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title"> The Cord Project</h1>
-      </div>
-    </div>
-  </section>
+
 
   <% for (const type in locals.messages) { %>
     <div class="message is-<%= type %>">
@@ -25,7 +22,8 @@
   <% } %>
 
     <%- body %>
-    </div>
+
     <% include ./partials/_footer %>
+      </div>
   </body>
 </html>

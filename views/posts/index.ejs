@@ -1,12 +1,13 @@
-
+<img src="../the-cord-project.png" alt="header">
   <div class="columns is-multiline">
 <% posts.forEach(post => { %>
+  <div class="column is-4">
   <a href="/posts/<%= post.id %>">
-  <div class="column is-6">
+  <figure class="image is-square is-240x240">
   <img src=<%= post.image %> alt=<%= post.title %> />
-  <h2 class="title is-2"><%= post.title %></h2>
-  <h3 class="subtitle is-2"><%= post.subtitle %></h3>
-  </div>
+  </figure>
+  <h2 class="title is-6"><%= post.title %></h2>
   </a>
+  </div>
 <% }) %>
 </div>
