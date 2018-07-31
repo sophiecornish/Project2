@@ -1,0 +1,25 @@
+<% post.comments.forEach(comment=> { %>
+  <div class="columns">
+  <div class="column is-11">
+  <p>
+  <strong class="commenter">
+  <%= comment.name %> :
+  </strong>
+  <%= comment.content %>
+</p>
+</div>
+<div class="column is-1">
+<% if (locals.isLoggedIn && locals.user.username === comment.name) { %>
+  <form action="/posts/<%=post.id%>/comments/<%=comment.id%>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <button class="button is-delete"></button>
+  </form>
+  <% } %>
+  </div>
+  </div>
+
+<% }) %>
+
+<% if (locals.isLoggedIn) { %>
+<%-  include('new', {post}) %>
+<% } %>

@@ -1,0 +1,50 @@
+
+<div class="columns is-centered">
+  <div class="column is-10">
+    <img src="<%= post.image %>" alt="">
+  </div>
+</div>
+
+<hr>
+
+
+  <div class="column is-one-half">
+
+    <h1 class="title is-1"><%= post.title %></h1>
+    <h2 class="subtitle is-1"><%= post.subtitle %></h2>
+    <h2 class="subtitle is-1"><%= post.author.username %></h2>
+
+  </div>
+
+<hr>
+  <div class="column is-centered">
+    <div class="column is-10">
+      <p><%= post.content %></p>
+    </div>
+  </div>
+
+<div class="column is-one-half">
+
+    <p>Posted: <%= post.date %></p>
+    <p>likes: <%= post.likes %></p>
+</div>
+
+
+    <%- include('../comments/index', {post}) %>
+
+    <% if (locals.isLoggedIn) { %>
+            <hr/>
+    <div class="section">
+      <div class="level">
+        <div class="level-left">
+          <a class="button is-warning" href="/posts/<%= post.id %>/edit">Edit</a>
+        </div>
+        <div class="level-right">
+          <form class="" action="/posts/<%= post.id %>" method="POST">
+            <button class="button is-danger">DELETE</button>
+            <input type="hidden" name="_method" value="DELETE">
+          </form>
+        </div>
+      </div>
+    </div>
+  <% } %>

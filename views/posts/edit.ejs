@@ -1,0 +1,66 @@
+<h2 class="title is-2">Edit <%= post.name %></h2>
+
+
+<form action="/posts/<%= post.id %>" method="POST">
+    <div class="field">
+      <label class="label" for="title">Title</label>
+      <div class="control">
+        <input name="title" value="<%= post.title %>" class="input" type="text">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label" for="subtitle">Subtitle</label>
+      <div class="control">
+        <input name="subtitle" value="<%= post.subtitle %>"class="input" type="text">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label" for="authorName">Author Name</label>
+      <div class="control">
+        <input name="authorName" value="<%= post.authorName %>" class="input" type="text">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label" for="image">Image (URL)</label>
+      <div class="control">
+        <input name="image" value="<%= post.image %>"class="input" type="text">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label" for="date">Date Published</label>
+      <div class="control">
+        <input name="date" value="<%= post.date %>"class="input" type="text">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label" for="readingTime">Reading Time</label>
+      <div class="control">
+        <input name="readingTime" value="<%= post.readingTime %>" class="input" type="text">
+      </div>
+    </div>
+
+
+    <div class="field">
+      <label class="label" for="likes">Likes</label>
+      <div class="control">
+        <input name="likes" value="<%= post.likes %>" class="input" type="number">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label" for="content">Content</label>
+      <div class="control">
+        <input name="content" value="<%= post.content %>"class="input" type="text">
+      </div>
+    </div>
+
+
+      <input type="hidden" name="_method" value="PUT"> <%# links to methodOverride %>
+
+      <button class="button is-warning">Edit Post</button>
+  </form>

@@ -1,0 +1,13 @@
+<form class="" action="/posts/<%= post.id %>/comments" method="POST">
+  <div class="field">
+    <label for="content">Add a comment</label>
+    <textarea class="textarea" name="content" placeholder="eg. Wow! This is great!"></textarea>
+  </div>
+
+  <input type="hidden" name="name" value="<%= locals.user.username %>">
+
+  <div class="field">
+    <button class="button-is-info">Submit</button>
+  </div>
+
+</form>
