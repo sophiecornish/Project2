@@ -11,15 +11,15 @@
 
     <% if(!locals.isLoggedIn) { %>
     <a class="navbar-item" href="/about">ABOUT</a>
-    <a class="navbar-item" href="/posts">POSTS</a>
+    <a class="navbar-item" href="/posts">ARCHIVE</a>
     <a class="navbar-item" href="/registrations/new">SIGN UP</a>
     <a class="navbar-item" href="/sessions/new">LOGIN</a>
   <% } else { %>
-    <a class="navbar-item" href="/posts/new">New Blog Post</a>
-    <a class="navbar-item" href="/about">About</a>
-    <a class="navbar-item" href="/posts">Posts</a>
+    <a class="navbar-item" href="/posts/new">CREATE NEW POST</a>
+    <a class="navbar-item" href="/about">ABOUT</a>
+    <a class="navbar-item" href="/posts">ARCHIVE</a>
 
-    <a class="navbar-item" href="/sessions/delete">Log Out <%= locals.user.username %></a>
+    <a class="navbar-item" href="/sessions/delete">LOG OUT <%= locals.user.username %></a>
     <% } %>
 
 

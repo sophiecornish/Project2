@@ -13,7 +13,11 @@ function sessionsCreate(req, res) {
       } else {
         req.flash('primary', `Welcome back ${user.username}`);
         req.session.userId = user.id;
-        res.redirect('/posts');
+        if(req.body.targetUrl) {
+          res.redirect(req.body.targetUrl);
+        } else {
+          res.redirect('/');
+        }
       }
     });
 }

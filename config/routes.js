@@ -12,9 +12,10 @@ const Post = require('../models/post');
 
 function secureRoute(req, res, next) {
   if (!req.session.userId) {
+    const targetUrl = req.url;
     return req.session.regenerate(() => {
       req.flash('danger', 'Please login to view this page');
-      res.redirect('./sessions/new');
+      res.render('sessions/new', { targetUrl });
     });
   }
   return next();
@@ -67,7 +68,7 @@ router.get('/posts/:id/edit', postController.edit);
 
 router.route('/posts/:id')
   .put(postController.update)
-  .get(postController.show)
+  .get(secureRoute, postController.show)
   .delete((req, res, next) => {
     if (req.session.isLoggedIn) {
       postController.delete();

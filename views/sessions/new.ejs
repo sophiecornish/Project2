@@ -9,6 +9,9 @@
     <label for="password">Password</label>
     <input class="input" type="password" name="password" id="password">
   </div>
+  <% if(locals.targetUrl) { %>
+  <input type="hidden" name="targetUrl" value="<%= targetUrl %>">
+  <% } %>
   <button class="button is-info">Login</button>
 </form>
 

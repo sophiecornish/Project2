@@ -20,6 +20,7 @@ function postsShow(req, res) {
     });
 }
 
+
 function postsNew(req, res) {
   res.render('posts/new');
 }
