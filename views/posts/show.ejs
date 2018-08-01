@@ -15,8 +15,8 @@
 
     <h1 class="title is-1"><%= post.title %></h1>
     <h2 class="subtitle is-1"><%= post.subtitle %></h2>
-    <h2 class="subtitle is-1"><%= post.author.username %></h2>
-
+    <h2 class="subtitle is-6">Author: <%= post.author.username %></h2>
+<hr>
   </div>
 
   <hr>
@@ -26,10 +26,14 @@
     </div>
   </div>
 
+
+
   <div class="column is-one-half">
 
-    <p>Posted: <%= post.date %></p>
-    <p>likes: <%= post.likes %></p>
+    <hr>
+
+    <p>❤️ <%= post.likes %></p>
+    <p>Posted: <%= post.createdAt %></p>
   </div>
 </div>
 

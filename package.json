@@ -12,6 +12,7 @@
     "bcrypt": "^3.0.0",
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.3",
+    "bulma-extensions": "^2.2.1",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "express-ejs-layouts": "^2.4.0",

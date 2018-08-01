@@ -1,8 +1,8 @@
-<nav class="navbar is-light">
+<nav class="navbar">
   <div class="container">
 <div class="navbar-left">
   <div class="navbar-brand">
-  <a class="navbar-item" href="/">THE CORD PROJECT</a>
+  <a class="navbar-item home-button" href="/">THE CORD PROJECT</a>
   </div>
 </div>
 <div class="navbar-end">
@@ -10,10 +10,10 @@
 
 
     <% if(!locals.isLoggedIn) { %>
-    <a class="navbar-item" href="/about">About</a>
-    <a class="navbar-item" href="/posts">Posts</a>
-    <a class="navbar-item" href="/registrations/new">Sign up</a>
-    <a class="navbar-item" href="/sessions/new">Login</a>
+    <a class="navbar-item" href="/about">ABOUT</a>
+    <a class="navbar-item" href="/posts">POSTS</a>
+    <a class="navbar-item" href="/registrations/new">SIGN UP</a>
+    <a class="navbar-item" href="/sessions/new">LOGIN</a>
   <% } else { %>
     <a class="navbar-item" href="/posts/new">New Blog Post</a>
     <a class="navbar-item" href="/about">About</a>
