@@ -9,19 +9,19 @@
             <img src="<%= recentPosts[i].image %>" alt="<%= recentPosts[i].title %>" />
           </div>
 
-          <div class="column is-6">
+          <div class="show-post column is-6">
             <h2 class="title is-2"><%= recentPosts[i].title %></h2>
             <h3 class="subtitle is-4"><%= recentPosts[i].subtitle %></h3>
-            <p> <%= recentPosts[i].content %> </p>
+            <p class="show-post"> <%= recentPosts[i].content %> </p>
           </div>
         <% } else { %>
           <div class="column is-6">
             <h2 class="title is-2"><%= recentPosts[i].title %></h2>
             <h3 class="subtitle is-4"><%= recentPosts[i].subtitle %></h3>
-            <p> <%= recentPosts[i].content %> </p>
+            <p class="show-post"> <%= recentPosts[i].content %> </p>
           </div>
 
-          <div class="column is-6">
+          <div class="show-post column is-6">
             <img src="<%= recentPosts[i].image %>" alt="<%= recentPosts[i].title %>" />
           </div>
         <% } %>

@@ -13,7 +13,7 @@ function postsShow(req, res) {
   const postId = req.params.id;
   Post
     .findById(postId)
-    .populate('author')
+    .populate('author comments.createdBy')
     .then(post => {
       console.log('this is the post ---->', post);
       res.render('posts/show', {post});

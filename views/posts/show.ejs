@@ -22,7 +22,7 @@
   <hr>
   <div class="column is-12">
     <div class="column is-12">
-      <p><%= post.content %></p>
+      <p class='about-text'><%= post.content %></p>
     </div>
   </div>
 
@@ -32,8 +32,9 @@
 
     <hr>
 
-    <p>❤️ <%= post.likes %></p>
-    <p>Posted: <%= post.createdAt %></p>
+    <p><strong>❤️ <%= post.likes %></strong></p>
+    <br>
+    <p><strong>Posted:</strong> <%= post.createdAt %></p>
   </div>
 </div>
 
@@ -44,12 +45,10 @@
             <hr/>
     <div class="section">
       <div class="level">
-        <div class="level-left">
-          <a class="button is-warning" href="/posts/<%= post.id %>/edit">Edit</a>
-        </div>
         <div class="level-right">
+          <a class="button" href="/posts/<%= post.id %>/edit">EDIT POST</a>
           <form class="" action="/posts/<%= post.id %>" method="POST">
-            <button class="button is-danger">DELETE</button>
+            <button class="button">DELETE POST</button>
             <input type="hidden" name="_method" value="DELETE">
           </form>
         </div>

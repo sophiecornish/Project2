@@ -1,6 +1,7 @@
 const Post = require('../models/post');
 
 function commentsCreate(req, res) {
+  req.body.createdBy = res.locals.user.id;
   Post
     .findById(req.params.postId)
     .then(post => {

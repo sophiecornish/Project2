@@ -26,6 +26,10 @@ body {
   width: 100%;
 }
 
+.about-text {
+  font-size: 20px;
+}
+
 .home-button {
   font-family: 'Cinzel', serif;
   font-size: 20px;
@@ -48,4 +52,20 @@ h1 {
 
 .form {
   height: 100vh;
+  width: 50%;
+  margin-top: 50px;
+}
+
+.button {
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(90, 90, 90);
+  border-radius: 10%;
+  color: white;
+}
+
+
+.show-post {
+    white-space: inherit;
+    overflow: hidden;
+    text-overflow:ellipsis;
 }

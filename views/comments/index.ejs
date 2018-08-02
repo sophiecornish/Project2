@@ -3,16 +3,17 @@
   <div class="column is-11">
   <p>
   <strong class="commenter">
-  <%= comment.name %> :
+  <%= comment.createdBy.username %> :
   </strong>
   <%= comment.content %>
 </p>
 </div>
 <div class="column is-1">
-<% if (locals.isLoggedIn && locals.user.username === comment.name) { %>
+<% if (locals.isLoggedIn && locals.user.id === comment.createdBy.id) { %>
   <form action="/posts/<%=post.id%>/comments/<%=comment.id%>" method="POST">
   <input type="hidden" name="_method" value="DELETE">
-  <button class="button is-delete"></button>
+  <button class='delete'></button>
+
   </form>
   <% } %>
   </div>

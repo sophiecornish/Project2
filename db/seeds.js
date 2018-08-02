@@ -33,8 +33,8 @@ User
       readingTime: 8,
       likes: 293,
       comments: [
-        {name: 'Sophie', content: 'Wow I never knew'},
-        {name: 'Laura', content: 'Thanks for sharing. Check out my blog!'}
+        {createdBy: users[0], content: 'Wow I never knew'},
+        {createdBy: users[1], content: 'Thanks for sharing. Check out my blog!'}
       ]
     },
     {
@@ -64,8 +64,8 @@ User
       readingTime: 8,
       likes: 293,
       comments: [
-        {name: 'Sophie', content: 'Wow I never knew'},
-        {name: 'Laura', content: 'Thanks for sharing. Check out my blog!'}
+        {createdBy: users[1], content: 'Wow I never knew'},
+        {createdBy: users[0], content: 'Thanks for sharing. Check out my blog!'}
       ]
     },
     {
